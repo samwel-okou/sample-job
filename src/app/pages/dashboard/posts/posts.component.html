@@ -1,0 +1,137 @@
+<!-- Container-fluid starts-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <nav class="breadcrumb m-b-0">
+        <a class="breadcrumb-item" href="/">Home</a>
+        <a class="breadcrumb-item" [routerLink]="'/dashboard/posts'"
+          >System Config</a
+        >
+        <span class="breadcrumb-item active">System Posts</span>
+      </nav>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header bg-white">
+          <h5>SYSTEM POSTS JOBS</h5>
+        </div>
+        <div class="card-body">
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <nav class="breadcrumb m-b-0">
+                  <a class="breadcrumb-item" href="/">Home</a>
+                  <a class="breadcrumb-item" [routerLink]="'/dashboard/jobs'"
+                    >System Config</a
+                  >
+                  <span class="breadcrumb-item active">System Jobs</span>
+                </nav>
+              </div>
+            </div>
+            <div class="row">
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <input
+                    type="text"
+                    class="filter-ngx form-control"
+                    placeholder="Type to filter the posts details..."
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <button
+                    class="btn btn-pill btn-air-info btn-info pull-right btn-sm"
+                  >
+                    <i class="fa fa-plus"></i> Add New Jobs
+                  </button>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header bg-white">
+                    <h5>View Jobs</h5>
+                  </div>
+                  <div class="card-body">
+                    <!-- page title -->
+                    <app-page-title
+                      [breadcrumbItems]="pageTitle"
+                      title=""
+                    ></app-page-title>
+
+                    <div class="row">
+                      <div class="col-lg-4 col-xl-3">
+                        <!-- <app-app-jobs-professional-info
+                [user]="user"
+              ></app-app-jobs-professional-info> -->
+                      </div>
+                      <!-- end col -->
+                      <div class="col-lg-8 col-xl-9">
+                        <div class="card">
+                          <div class="card-body">
+                            <ul
+                              ngbNav
+                              #nav="ngbNav"
+                              [(activeId)]="active"
+                              class="nav-pills navtab-bg nav-justified p-1"
+                            >
+                              <!-- <li [ngbNavItem]="'activity'">
+                      <a ngbNavLink>Activity</a>
+                      <ng-template ngbNavContent>
+                        <app-profile-activity
+                          [activities]="activities"
+                        ></app-profile-activity>
+                      </ng-template>
+                    </li> -->
+                              <!-- <li [ngbNavItem]="'messages'">
+                      <a ngbNavLink>Messages</a>
+                      <ng-template ngbNavContent>
+                        <app-profile-messages
+                          [messages]="messages"
+                        ></app-profile-messages>
+                      </ng-template>
+                    </li> -->
+                              <li [ngbNavItem]="'view'">
+                                <a ngbNavLink>view jobs</a>
+                                <ng-template ngbNavContent>
+                                  <app-view-posts-jobs
+                                    [projects]="projects"
+                                  ></app-view-posts-jobs>
+                                </ng-template>
+                              </li>
+                              <!-- <li [ngbNavItem]="'tasks'">
+                      <a ngbNavLink>Tasks</a>
+                      <ng-template ngbNavContent>
+                        <app-profile-tasks
+                          [taskList]="taskList"
+                        ></app-profile-tasks>
+                      </ng-template>
+                    </li> -->
+                              <!-- <li [ngbNavItem]="'files'">
+                      <a ngbNavLink>Files</a>
+                      <ng-template ngbNavContent>
+                        <app-profile-files [files]="files"></app-profile-files>
+                      </ng-template>
+                    </li> -->
+                            </ul>
+
+                            <div [ngbNavOutlet]="nav"></div>
+                          </div>
+                        </div>
+                        <!-- end card -->
+                      </div>
+                    </div>
+                    <!-- end row -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container-fluid Ends-->
